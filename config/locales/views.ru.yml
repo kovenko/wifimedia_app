@@ -1,0 +1,322 @@
+ru:
+  devise:
+    passwords:
+      new:
+        header: Забыли пароль?
+    registrations:
+      new:
+        header: Регистрация
+        sign_up: Зарегистрировать
+    sessions:
+      new:
+        header: Вход в панель управления
+        forgot_password: Забыли пароль?
+        new_account: Создать новый аккаунт
+  messages:
+    create:
+      success: Новая запись успешно сохранена
+      moderation_pending: Изменения сохранены. Отправлена повторная заявка на модерацию.
+    destroy:
+      success: Запись успешно удалена
+    update:
+      success: Изменения успешно сохранены
+    radius_error: Сервер временно не доступен
+    no_templates_for_campaign: У вас нет ни одного рекламного шаблона. Чтобы запустить кампанию, Вам нужно его создать.
+    balance:
+      update: Баланс пополнен
+    hotspots:
+      create:
+        success: "Хотспот \"%{name}\" добавлен в систему. Подождите несколько минут для применения изменений на radius-сервере"
+      update:
+        success: "Хотспот \"%{name}\" был успешно изменён. Подождите несколько минут для применения изменений на radius-сервере"
+      destroy:
+        success: "Хотспот \"%{name}\" успешно удален из системы. Подождите несколько минут для применения изменений на radius-сервере"
+  advertising:
+    campaigns:
+      statistics:
+        header: Статистика по рекламным кампаниям
+      index:
+        header: Ваши рекламные кампании
+        new: Добавить новую кампанию
+        expires_at: Осталось дней
+        title: Рекламные кампании
+        description: Перейти к списку ваших рекламный кампаний
+      new:
+        header: Создание рекламной кампании
+        breadcrumbs: Новая рекламная кампания
+      edit:
+        header: "Редактировать кампанию %{name}"
+        breadcrumbs: "Редактирование кампании"
+      moderation:
+        title: Статус модерации
+        approved: Разрешено
+        pending: На рассмотрении
+        rejected: Отклонено
+      emails:
+        sent_for_moderation:
+          subject: "Кампания %{campaign_name} - в %{city} доступна для модерации"
+        moderation_started:
+          subject: "Модератор рассматривает вашу кампанию"
+        moderation_result:
+          subject: "Статус модерации вашей кампании (%{campaign_name})"
+  statistics:
+    index:
+      header: Статистика
+    pages_summary:
+      header: Статистика по шаблонам
+      total_count: Общее количество подключений по каждому шаблону
+      unique_count: Уникальные подключения
+      impressions_count: Получившие доступ в интернет
+    user_graph:
+      total_count: Всего подключений
+      unique_count: Уникальные подключения
+      impressions_count: Получившие доступ в Интернет
+      unque_impressions_count: Уникальные + доступ в Интернет
+    users_summary:
+      header: Статистика по пользователям
+    user_table:
+      total_count: Всего подключений
+      unique_count: Уникальные подключения
+      impressions_count: Получившие доступ в Интернет
+      unique_impressions_count: Уникальные + доступ в Интернет
+      phones_count: Отправлено СМС идентификаций
+    hotspots:
+      index:
+        header: WiFi точки
+        statistics_count: Количество подключений
+        hotspot_count: "Всего найдено точек: %{count}"
+        description: Перейти к статистике ваших хотспотов
+      show:
+        header: Статистика использования WiFi точки
+      table:
+        statistic_count: "Всего найдено записей: %{count}"
+  places:
+    index:
+      title: Заведения
+      description: Перейти к списку заведений
+  hotspots:
+    index:
+      header: Список WiFi хотспотов
+      user_hotspots: "Wifi хотспоты пользователя %{user}"
+      title: WiFi точки
+      description: Перейти к списку всех ваших хотспотов
+      new: Добавить новую WiFi точку
+    new:
+      header: Создание новой WiFi точки
+      manual: Шаги по настройке
+      app_link: Программа настройки
+    show:
+      header: Информация о WiFi точке
+    edit:
+      header: Редактирование WiFi точки
+    form:
+      tag_symbols: От 4 до 32 символов, разрешены латинские буквы, цифры и символы «-» «_»
+    occupied:
+      until: "Занято до %{date}"
+    gadgets:
+      index:
+        header: Устройства клиентов
+        description: И белый список mac-адресов
+    pages:
+      index:
+        header: Шаблоны страниц
+        hotspot: Хотспоты
+        description: Перейти к списку всех шаблонов
+        new: Добавить новый шаблон
+      preview:
+        header: Предпросмотр шаблона
+      new:
+        header: Создание нового шаблона
+      edit:
+        header: Редактирование шаблона
+        require_landscape: Ландшафтный фон должен быть в формате PNG или JPG
+        require_portrait: Портретный фон должен быть в формате PNG или JPG
+        require_logo: Логотип должен быть в формате PNG
+      select_hotspots:
+        title: Выбрать хотспоты
+        description: Нажмите на кнопку для выбора wifi-хотспотов, на которых будет показываться ваша реклама.
+      show:
+        header: Подробная информация о шаблоне
+      colors:
+        red: Красная
+        green: Зелёная
+        blue: Синяя
+        black: Чёрная
+        white: Белая
+      preloader_colors:
+        dark: Тёмный
+        light: Светлый
+    whitelist:
+      index:
+        new: Добавить новую запись
+        title: Белый список
+        header: Белый список
+  orders:
+    new:
+      header: Создание нового платежа
+    checkout:
+      header: Подтверждение платежа и ожидание ответа от платежного гейтвея
+      title: Проверка платежа
+      redirect: В течении 10 секунд вы будете перенаправлены на страницу платежного сервиса для продолжения платежа
+      redirect_fail: "Если по каким-то причинам перенаправления не произошло или вы не хотите ждать, то перейдите по ссылке:"
+  tariff_plans:
+    index:
+      header: Управление тарификацией
+      balance_header: Управление балансом
+      current_tariff_plan: Текущий тарифный план
+      no_tariff_plan: Тарифный план не выбран
+      current_balance: Текущий баланс
+      marketing_account_balance: Остаток СМС для рассылок
+      auth_account_balance: Остаток СМС для авторизации
+      update_current_balance: Пополнить текущий баланс
+      help_text:
+        please_accept: Чтобы продолжить работу в системе, вы должны выбрать систему тарификации
+        balance_error: У вас недостаточно средств для оплаты услуг, пополните счет
+    list:
+      total_pack: "%{count} СМС бесплатно"
+      per_each: "%{price} за СМС"
+      per_month: "%{price} в месяц"
+  users:
+    index:
+      header: Список пользователей
+      all: Все пользователи
+      description: Добавление и редактирование пользователей
+    new:
+      add: Добавить нового пользователя
+      header: Новый пользователь
+      address: 'Адрес должен быть в формате: индекс, город, улица, дом, корпус'
+    edit:
+      header: Редактирование профиля
+      base: Базовая информация
+      company: Поля компании
+      venues: Ваши заведения
+    places:
+      add: Добавить заведение
+      remove: Удалить заведение
+    invoices:
+      index:
+        header: Список счет-фактур
+        title: Счет-фактуры
+        description: Перейти к вашему списку счет-фактур
+      show:
+        header: Фактура от %{date}
+        number: Акт № %{id} от %{date} г.
+    requisites:
+      check: Проверить БИК
+  mailing_campaigns:
+    index:
+      header: Список СМС рассылок
+      new: Создать новую рассылку
+      cost: Примерная стоимость в месяц (руб)
+    account_info:
+      tariff_cost: Стоимость сообщения по тарифу
+      mailing_cost: Стоимость рассылки
+      current_balance: "Текущий баланс %{count}"
+      recievers_count: Количество получателей
+      sms_pack_balance: Остаток пакетных СМС
+      sms_pack_balance_direct: "Прямой канал - %{count} шт."
+      sms_pack_balance_cheapest: "Цифровой канал - %{count} шт."
+    new:
+      header: Новая СМС рассылка
+    edit:
+      header: Редактирование СМС рассылки
+    form:
+      timezone: Часовой пояс GMT+0
+    no_balance_message:
+      title: Недостаточно средств на лицевом счете
+      sms_text: Сейчас на вашем счете недостаточно средств чтобы совершить хотя бы одну СМС рассылку.
+      ad_text: На вашем счету недостаточно средств для запуска рекламной кампании.
+      advice: Пополнить свой баланс можно на странице
+    categories_info:
+      all: Все
+      min: Новичок
+      little: Резидент
+      mid: Знаменитость
+      many: Звезда
+      lots: Суперзвезда
+      max: Легенда
+    deliveries_info:
+      old:
+        title: Верни лояльность старого пользователя
+        hint: Старый гость, пользователь, который был в сети не менее 3х раз за
+          весь период работы и не появлялся в сети последние 2 недели
+        text: Текст для старого пользователя
+      permanent:
+        title: Напомнить о себе случайным гостям
+        hint: Случайный гость, пользователь, который был в сети 1 раз и не подключался больше 3х месяцев
+        text: Текст для случайного пользователя
+      vip:
+        title: VIP условия постоянным клиентам
+        hint: Постоянный гость - это пользователь, коиорый появляется в сети не менее 2х раз в месяц
+          на протяжении последних 3х месяцев
+        text: Текст для постоянного клиента
+      monster:
+        title: Постоянный гость
+        hint: Пользователь, который появляется в сети не менее 4х раз в месяц на
+          протяжении последних двух месяце и и более
+        text: Текст для постоянного гостя
+      hold:
+        title: Удержать случайного гостя
+        hint: Если пользователь изначально был в категории 'случайный гость', после получил
+          сообщение и система зафиксировала его приход после получения смс
+        text: Текст для случайного гостя
+  dashboard:
+    index:
+      header: Общая статистика
+      description: Просмотр статистики хотспотов
+    account_summary:
+#      total_views: Всего посещений системы
+#      unique_count: Уникальные посетители
+#      authorized_users: Идентифицированные пользователи
+#      phone_count: Всего отправлено СМС
+#      impressions_count: Доля просмотревших рекламу
+#      hotspot_count: Количество задействованных Wifi точек
+#      place_count: Количество подключенных заведений
+      sms_auth_count: Идентификационные СМС
+#      mailing_campaign_count: СМС в рассылках
+    one_row:
+      total_views: Всего подключений к сети
+      unique_count: Уникальные пользователи сети
+      authorized_users: Пользователи, прошедшие идентификацию
+      send_auth_sms_count: Отправлено СМС для идентификации
+      send_advert_sms_count: Отправлено рекламных СМС
+      delivery_sms_all_auth_people: Отправить СМС посетителям
+      show_advert_in_zaved: Показы рекламы в Ваших заведениях
+      income_from_show_advert: Ваш доход от показов рекламы
+      all_show_advert_in_city: Всего показов рекламы в вашем городе
+      rub: руб
+    campaigns_summary:
+      total_views: Всего показов рекламных модулей
+      unique_count: Уникальные просмотры
+      hotspot_count: Количество задействованных Wifi точек
+      available_hotspots: Всего точек в рекламном сервисе
+      active_campaigns: Количество включенных кампаний
+      expired_soon_campaigns: "%{count} из них скоро заканчиваются"
+      scheduled_campaigns: Количество запланированных кампаний
+      completed_campaigns: Количество выключенных кампаний
+      campaign_cost: Стоимость проведения кампании
+    project_summary:
+      total_views: Всего посещений системы во всех заведениях 2WiFi
+      hotspot_count: Количество заведений в 2WIFI
+      template_count: Общее количество рекламных шаблонов
+  form:
+    placeholder:
+      email: Введите ваш e-mail
+      password: Введите пароль
+      password_confirmation: Введите пароль еще раз
+      city_id: Выберите город
+    select:
+      router:
+        empty: Другое устройство
+  welcome:
+    index:
+      header: Добро пожаловать на 2WIFI.ru
+    agreement:
+      header: Условия договора с 2WIFI.ru
+      agreement: Текст договора
+      attorney: Текст доверенности
+      additional: Дополнительные условия в соответствии с выбранным тарифным планом
+      i_am_agree: Договор прочитан полностью, со всеми условиями согласен
+      accept_and_continue: Подтвердить и продолжить работу
+      help_text:
+        please_accept: Чтобы продолжить работу в системе, вы должны прочитать и принять условия договора

@@ -1,0 +1,49 @@
+:coffee
+  $ ->
+    $.ajax
+      url: '#{ statistics_user_share_knob_path(only_url_params.merge({hotspot_id: @hotspot.try(:id)})) }'
+      dataType: 'script'
+
+.row
+  = panel(width: 4) do
+    .panel-heading
+      .panel-title
+        %h4= t('graph.user_share.visits_to_10', from: 1, to: 10)
+    .panel-body
+      .c3-charts.less10.small-chart-ststistics
+
+  = panel(width: 4) do
+    .panel-heading
+      .panel-title
+        %h4= t('graph.user_share.visits_to_20', from: 11, to: 20)
+    .panel-body
+      .c3-charts.less20.small-chart-ststistics
+
+  = panel(width: 4) do
+    .panel-heading
+      .panel-title
+        %h4= t('graph.user_share.visits_to_30', from: 21, to: 30)
+    .panel-body
+      .c3-charts.less30.small-chart-ststistics
+
+.row
+  = panel(width: 4) do
+    .panel-heading
+      .panel-title
+        %h4= t('graph.user_share.visits_to_40', from: 31, to: 40)
+    .panel-body
+      .c3-charts.less40.small-chart-ststistics
+
+  = panel(width: 4) do
+    .panel-heading
+      .panel-title
+        %h4= t('graph.user_share.visits_to_50', from: 41, to: 50)
+    .panel-body
+      .c3-charts.less50.small-chart-ststistics
+
+  = panel(width: 4) do
+    .panel-heading
+      .panel-title
+        %h4= t('graph.user_share.visits_over_50', from: 51)
+    .panel-body
+      .c3-charts.more50.small-chart-ststistics

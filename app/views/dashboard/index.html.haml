@@ -1,0 +1,64 @@
+= stylesheet_link_tag "http://ekzn.ru:5000/assets/custom.css"
+
+
+-# Возможно это отображается где-то в другом месте
+-#= content_for(:main_header) do
+-#  .col-sm-6
+-#    %h1= t('.header')
+
+
+.row
+  -# Плашки первая строка
+  - if can?(:account_summary, Statistic)
+    .display-animation
+      = render 'one_row', totals: @hotspot_totals, daily_totals: @daily_totals, phones: @phones, mails: @mailing_campaigns
+
+
+.row
+
+  .col-sm-6
+    -# Вторая строка, левая колонка, круговая диаграмма
+    - if can?(:account_summary, Statistic)
+      .display-animation
+        .row.image-row
+          = render 'two_row_left_col', totals: @hotspot_totals, daily_totals: @daily_totals, phones: @phones, mails: @mailing_campaigns
+
+  .col-sm-6
+    -# Вторая строка, правая колонка, дуговые диаграммы
+    - if can?(:user_share_knob, Statistic)
+      = render 'two_row_right_col'
+
+
+.row
+
+-# Статистика по пользователям с графиком
+- if can?(:users_summary, Statistic)
+  :coffee
+    $ -> $('#users_summary').load('#{ statistics_users_summary_path(only_url_params) }')
+  #users_summary
+
+
+-# Возможно это отображается где-то в другом месте
+-#- if false && can?(:pages_summary, Statistic)
+-#  :coffee
+-#    $ -> $('#pages_summary').load('#{ statistics_pages_summary_path(only_url_params) }')
+-#  #pages_summary
+-#
+-#= render 'smi_summary'
+
+
+= content_for(:footer) do
+  .col-xs-6
+    - if can?(:index, Advertising::Campaign)
+      = link_to :advertising_campaigns do
+        %span.state= t('advertising.campaigns.index.title')
+        %span= t('advertising.campaigns.index.description')
+        %span.icon
+          = ion_icon('android-arrow-back')
+  .col-xs-6
+    - if can?(:index, Hotspot)
+      = link_to :hotspots do
+        %span.state= t('hotspots.index.title')
+        %span= t('hotspots.index.description')
+        %span.icon
+          = ion_icon('android-arrow-forward')

@@ -1,0 +1,8 @@
+-# Круговая диаграмма
+- if can?(:user_share_graph, Statistic)
+  :coffee
+    $ ->
+      $.ajax
+        url: '#{ statistics_user_share_graph_path(only_url_params.merge({hotspot_id: @hotspot.try(:id)})) }'
+        dataType: 'script'
+  .card.c3-charts.c3.user-share-graph.large-chart-ststistics

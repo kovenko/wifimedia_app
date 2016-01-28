@@ -1,0 +1,74 @@
+-# Первая колонка
+.col-sm-4
+
+  -# Всего посещений системы
+  .card.tile.card-dashboard-info.card-green
+    .card-body
+      .card-icon= fa_icon('globe')
+      %h4.text-color-white= t('.total_views')
+      %p.result= number_with_delimiter totals.sum(:views)
+
+  -# Ваших уникальных пользователей
+  .card.tile.card-dashboard-info.card-green
+    .card-body
+      .card-icon= fa_icon('area-chart')
+      %h4.text-color-white= t('.unique_count')
+      %p.result= number_with_delimiter daily_totals.pluck(:unique_user_ids).flatten.uniq.count
+
+  -# Ваших идентифицированных посетителей
+  .card.tile.card-dashboard-info.card-green
+    .card-body
+      .card-icon= fa_icon('area-chart')
+      %h4.text-color-white= t('.authorized_users')
+      %p.result= number_with_delimiter phones.activated.count
+
+
+-# Вторая колонка
+.col-sm-4
+
+  -# Отправлено идентификационных СМС
+  .card.tile.card-dashboard-info.card-blue
+    .card-body
+      .card-icon= glyphicons_icon('glyphicon-phone')
+      %h4.text-color-white= t('.send_auth_sms_count')
+      %p.result= number_with_delimiter phones.sum(:sent_sms).to_s
+
+  -# Отправлено рекламных СМС
+  .card.tile.card-dashboard-info.card-blue
+    .card-body
+      .card-icon= glyphicons_icon('glyphicon-phone')
+      %h4.text-color-white= t('.send_advert_sms_count')
+      %p.result= number_with_delimiter mails.sum(:sms_send_count).to_s
+
+  -# Рассылка СМС всем идентифицированным посетителям
+  .card.tile.card-dashboard-info.card-blue
+    .card-body
+      .card-icon= glyphicons_icon('glyphicon-phone')
+      %h4.text-color-white= t('.delivery_sms_all_auth_people')
+      %p.result= (number_with_delimiter phones.activated.count * 2) + ' ' + t('.rub')
+      -# умножить на стоимость рекламной СМС из тарифа ( * 1)
+
+
+-# Третья колонка
+.col-sm-4
+
+  -# Показы рекламы в Ваших заведениях
+  .card.tile.card-dashboard-info.card-pink
+    .card-body
+      .card-icon= fa_icon('wifi')
+      %h4.text-color-white= t('.show_advert_in_zaved')
+      %p.result= number_with_delimiter 5000.to_s
+
+  -# Ваш доход от показов рекламы
+  .card.tile.card-dashboard-info.card-pink
+    .card-body
+      .card-icon= glyphicons_icon('glyphicon-usd')
+      %h4.text-color-white= t('.income_from_show_advert')
+      %p.result= number_with_delimiter 5000.to_s + ' ' + t('.rub')
+
+  -# Всего показов рекламы в вашем городе
+  .card.tile.card-dashboard-info.card-pink
+    .card-body
+      .card-icon= ion_icon('clipboard')
+      %h4.text-color-white= t('.all_show_advert_in_city')
+      %p.result= number_with_delimiter 5000.to_s
