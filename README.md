@@ -19,7 +19,7 @@
 
   Добавлена функция для коллекции иконок
 
-  <pre>
+  <code>
   def glyphicons_icon(icon, text = nil, html_options = {})
     text, html_options = nil, text if text.is_a?(Hash)
 
@@ -31,7 +31,7 @@
     html << ' ' << text.to_s unless text.blank?
     html
   end
-  </pre>
+  </code>
 
 4 app/views/dashboard/
 
@@ -79,17 +79,9 @@
 
   Зскомментарены сообщения старых представлений, добавлены новые
 
-  <pre>
+  <code>
     account_summary:
-#      total_views: Всего посещений системы
-#      unique_count: Уникальные посетители
-#      authorized_users: Идентифицированные пользователи
-#      phone_count: Всего отправлено СМС
-#      impressions_count: Доля просмотревших рекламу
-#      hotspot_count: Количество задействованных Wifi точек
-#      place_count: Количество подключенных заведений
       sms_auth_count: Идентификационные СМС
-#      mailing_campaign_count: СМС в рассылках
     one_row:
       total_views: Всего подключений к сети
       unique_count: Уникальные пользователи сети
@@ -101,12 +93,12 @@
       income_from_show_advert: Ваш доход от показов рекламы
       all_show_advert_in_city: Всего показов рекламы в вашем городе
       rub: руб
-  </pre>
+  </code>
 
 9 Требуется очеловечить в app/views/dashboard/index.html.haml
 
   <ul>
-  <li>подключение файла стилей = stylesheet_link_tag "http://ekzn.ru:5000/assets/custom.css"</li>
+  <li>подключение файла стилей <pre>= stylesheet_link_tag "http://ekzn.ru:5000/assets/custom.css"</pre></li>
   <li>убрать лишние вызовы в партиалах, если имеются.</li>
   </ul>
 
