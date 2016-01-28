@@ -10,13 +10,16 @@
 
   Добавлена функция для коллекции иконок
 
+  <pre>
   glyphicons_icon = html_options.delete(:glyphicons_icon)
     text = "#{glyphicons_icon(glyphicons_icon)} #{text}".html_safe if glyphicons_icon.present?
+  </pre>
 
 3 app/helpers/template_helper.rb
 
   Добавлена функция для коллекции иконок
 
+  <pre>
   def glyphicons_icon(icon, text = nil, html_options = {})
     text, html_options = nil, text if text.is_a?(Hash)
 
@@ -28,16 +31,19 @@
     html << ' ' << text.to_s unless text.blank?
     html
   end
+  </pre>
 
 4 app/views/dashboard/
 
   Переделаны представления, старые можно удалить.
 
   Новые файлы:
-  _one_row.html.haml
-  _two_row_left_col.html.haml
-  _two_row_right_col.html.haml
-  index.html.haml
+  <ul>
+  <li>_one_row.html.haml</li>
+  <li>_two_row_left_col.html.haml</li>
+  <li>_two_row_right_col.html.haml</li>
+  <li>index.html.haml</li>
+  </ul>
 
 5 app/views/statistics/user_share_knob.js.coffee
 
@@ -47,28 +53,33 @@
 
   Заменены местами таблица и график, таблица обернума в тег <small>
 
+  <pre>
   .panel-body
     .row
       %small.col-md-4.col-md-offset-8.user-table
     .row
       .col-md-12
         .user-graph.c3-charts
+  </pre>
 
 7 config/locales/ru.yml
 
   Добавлены строки - расшифровки
 
+  <pre>
       visits_to_10:   "Новичок"
       visits_to_20:   "Резидент"
       visits_to_30:   "Знаменитость"
       visits_to_40:   "Звезда"
       visits_to_50:   "Суперзвезда"
       visits_over_50: "Легенда"
+  </pre>
 
 8 config/locales/views.ru.yml
 
   Зскомментарены сообщения старых представлений, добавлены новые
 
+  <pre>
     account_summary:
 #      total_views: Всего посещений системы
 #      unique_count: Уникальные посетители
@@ -90,10 +101,14 @@
       income_from_show_advert: Ваш доход от показов рекламы
       all_show_advert_in_city: Всего показов рекламы в вашем городе
       rub: руб
+  </pre>
 
 9 Требуется очеловечить в app/views/dashboard/index.html.haml
-  - подключение файла стилей = stylesheet_link_tag "http://ekzn.ru:5000/assets/custom.css"
-  - убрать лишние вызовы в партиалах, если имеются.
+
+  <ul>
+  <li>подключение файла стилей = stylesheet_link_tag "http://ekzn.ru:5000/assets/custom.css"</li>
+  <li>убрать лишние вызовы в партиалах, если имеются.</li>
+  </ul>
 
 
 
