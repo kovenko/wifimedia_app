@@ -1,10 +1,10 @@
 # wifimedia_app
 
-Новые файлы:
+<h1>Новые файлы:</h1>
 
 1 app/assets/stylesheets/custom.css
 
-Внесены изменения:
+<h1>Внесены изменения:</h1>
 
 2 wifimedia_app/app/helpers/application_helper.rb
 
@@ -22,11 +22,11 @@
   <code>
   def glyphicons_icon(icon, text = nil, html_options = {})
     text, html_options = nil, text if text.is_a?(Hash)
-
+    <br>
     content_class = "glyphicon #{icon}"
     content_class << " #{html_options[:class]}" if html_options.key?(:class)
     html_options[:class] = content_class
-
+    <br>
     html = content_tag(:i, nil, html_options)
     html << ' ' << text.to_s unless text.blank?
     html
@@ -51,7 +51,7 @@
 
 6 app/views/statistics/users_summary.html.haml
 
-  Заменены местами таблица и график, таблица обернума в тег <small>
+  Заменены местами таблица и график, таблица обернута в тег <small>
 
   <pre>
   .panel-body
@@ -79,7 +79,7 @@
 
   Зскомментарены сообщения старых представлений, добавлены новые
 
-  <code>
+  <pre>
     account_summary:
       sms_auth_count: Идентификационные СМС
     one_row:
@@ -93,7 +93,7 @@
       income_from_show_advert: Ваш доход от показов рекламы
       all_show_advert_in_city: Всего показов рекламы в вашем городе
       rub: руб
-  </code>
+  </pre>
 
 9 Требуется очеловечить в app/views/dashboard/index.html.haml
 
@@ -101,6 +101,3 @@
   <li>подключение файла стилей <pre>= stylesheet_link_tag "http://ekzn.ru:5000/assets/custom.css"</pre></li>
   <li>убрать лишние вызовы в партиалах, если имеются.</li>
   </ul>
-
-
-
