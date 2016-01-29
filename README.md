@@ -1,10 +1,7 @@
 # wifimedia_app
 
-<h1>Новые файлы:</h1>
-
 1 app/assets/stylesheets/custom.css
-
-<h1>Внесены изменения:</h1>
+  Новый файл
 
 2 wifimedia_app/app/helpers/application_helper.rb
 
@@ -19,7 +16,7 @@
 
   Добавлена функция для коллекции иконок
 
-  <code>
+  <pre>
   def glyphicons_icon(icon, text = nil, html_options = {})
     text, html_options = nil, text if text.is_a?(Hash)
     <br>
@@ -31,7 +28,7 @@
     html << ' ' << text.to_s unless text.blank?
     html
   end
-  </code>
+  </pre>
 
 4 app/views/dashboard/
 
@@ -95,7 +92,9 @@
       rub: руб
   </pre>
 
-9 Требуется очеловечить в app/views/dashboard/index.html.haml
+9 app/views/dashboard/index.html.haml
+
+  Требуется очеловечить
 
   <ul>
   <li>подключение файла стилей <pre>= stylesheet_link_tag "http://ekzn.ru:5000/assets/custom.css"</pre></li>
