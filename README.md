@@ -42,11 +42,15 @@
   <li>index.html.haml</li>
   </ul>
 
-5 app/views/statistics/user_share_knob.js.coffee
+5 app/views/statistics/user_graph.js.coffee
+  Заменить, убрал пару первых столбцов из таблицы
+
+
+6 app/views/statistics/user_share_knob.js.coffee
 
   Заменить, включена передача цвета создаваемой диаграммы
 
-6 app/views/statistics/users_summary.html.haml
+7 app/views/statistics/users_summary.html.haml
 
   Заменены местами таблица и график, таблица обернута в тег <small>
 
@@ -59,7 +63,7 @@
         .user-graph.c3-charts
   </pre>
 
-7 config/locales/ru.yml
+8 config/locales/ru.yml
 
   Добавлены строки - расшифровки
 
@@ -72,11 +76,17 @@
       visits_over_50: "Легенда"
   </pre>
 
-8 config/locales/views.ru.yml
+9 config/locales/views.ru.yml
 
   Зскомментарены сообщения старых представлений, добавлены новые
 
+  Зсмена некоторых текстов для секции
   <pre>
+    statistics:
+  </pre>
+
+  <pre>
+  dashboard:
     account_summary:
       sms_auth_count: Идентификационные СМС
     one_row:
@@ -92,7 +102,7 @@
       rub: руб
   </pre>
 
-9 app/views/dashboard/index.html.haml
+10 app/views/dashboard/index.html.haml
 
   Требуется очеловечить
 

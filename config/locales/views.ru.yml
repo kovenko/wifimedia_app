@@ -70,16 +70,16 @@ ru:
     user_graph:
       total_count: Всего подключений
       unique_count: Уникальные подключения
-      impressions_count: Получившие доступ в Интернет
-      unque_impressions_count: Уникальные + доступ в Интернет
+      impressions_count: Всего подключений к сети
+      unque_impressions_count: Уникальные пользователи сети
     users_summary:
       header: Статистика по пользователям
     user_table:
       total_count: Всего подключений
       unique_count: Уникальные подключения
-      impressions_count: Получившие доступ в Интернет
-      unique_impressions_count: Уникальные + доступ в Интернет
-      phones_count: Отправлено СМС идентификаций
+      impressions_count: Всего подключений к сети
+      unique_impressions_count: Уникальные пользователи сети
+      phones_count: Идентификационных СМС
     hotspots:
       index:
         header: WiFi точки

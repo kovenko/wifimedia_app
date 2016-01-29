@@ -6,14 +6,16 @@
     .card-body
       .card-icon= fa_icon('globe')
       %h4.text-color-white= t('.total_views')
-      %p.result= number_with_delimiter totals.sum(:views)
+      -#%p#totals-sum.result= number_with_delimiter totals.sum(:views)
+      %p#totals-sum.result= number_with_delimiter 5000
 
   -# Ваших уникальных пользователей
   .card.tile.card-dashboard-info.card-green
     .card-body
       .card-icon= fa_icon('area-chart')
       %h4.text-color-white= t('.unique_count')
-      %p.result= number_with_delimiter daily_totals.pluck(:unique_user_ids).flatten.uniq.count
+      -#%p#unique_count.result= number_with_delimiter daily_totals.pluck(:unique_user_ids).flatten.uniq.count
+      %p#unique_count.result= number_with_delimiter 5000
 
   -# Ваших идентифицированных посетителей
   .card.tile.card-dashboard-info.card-green
